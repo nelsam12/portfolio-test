@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* box-shadow: 0px 0px 10px rgb(1, 69, 255); */
+}
+:root {
+  --content-padding: 150px;
+  --primary-font: "Poppins", sans-serif;
+  --primary-font-size: 3rem;
+  --primary-color: oklch(28.2% 0.091 267.935);
+}
+
+body {
+  font-family: var(--primary-font);
+  background-color: oklch(98.4% 0.003 247.858);
+  position: relative;
+}
+
+header {
+  /* Menu sticky et fixe */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  /* Margin ou padding pour le contenu  */
+  margin-top: 0;
+
+  background: #ffff;
+  padding: 30px;
+  /* border: 1px solid; */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .left {
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+    background: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      color: white;
+      font-weight: bold;
+      font-size: 24px;
+      text-align: center;
+      line-height: 60px;
+    }
+  }
+
+  .right {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-weight: 500;
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+}
+
+.content {
+  .accueil {
+    padding: var(--content-padding);
+    height: 100vh;
+    /* background: red; */
+    .card {
+      padding: 20px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      .badge {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: oklch(68.5% 0.169 237.323);
+        font-size: 13px;
+        background: oklch(98.4% 0.019 200.873);
+        padding: 10px 25px;
+        border-radius: 30px;
+        width: fit-content;
+        border: 1px solid oklch(80.712% 0.10074 250.473 / 0.377);
+        box-shadow: 0px 0px 5px oklch(80.9% 0.105 251.813 / 0.5);
+        img {
+          width: 20px;
+        }
+      }
+
+      .card-content {
+        display: flex;
+        align-items: center;
+        .left {
+          width: 50%;
+          h1 {
+            font-size: var(--primary-font-size);
+            color: var(--primary-color);
+            margin: 20px 0;
+          }
+          p {
+            color: var(--primary-color);
+            font-size: 18px;
+          }
+
+          .btns {
+            margin-top: 20px;
+            .btn {
+              border: 1px solid var(--primary-color);
+              padding: 15px 20px;
+              color: white;
+
+              border-radius: 10px;
+              color: var(--primary-color);
+              cursor: pointer;
+              font-size: 16px;
+              margin-right: 10px;
+              text-decoration: none;
+
+              &:hover {
+                background: var(--primary-color);
+                color: white;
+              }
+            }
+          }
+        }
+
+        .right {
+          width: 60%;
+          img {
+            border-radius: 20px;
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+
+      .card-footer {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .mini-card {
+          margin-top: 20px;
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+          padding: 20px;
+          border-radius: 15px;
+          width: fit-content;
+          h1 {
+            color: oklch(33.718% 0.07158 236.328);
+            font-size: 24px;
+            font-weight: bold;
+          }
+          p {
+            color: oklch(28.2% 0.091 267.935);
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .a-propos {
+    padding: var(--content-padding);
+    height: 100vh;
+    /* background: white; */
+  }
+
+  .profil {
+    padding: var(--content-padding);
+    height: 100vh;
+    /* background: yellow; */
+  }
+
+  .projets {
+    padding: var(--content-padding);
+    height: 100vh;
+    /* background: green; */
+  }
+
+  .contact {
+    padding: var(--content-padding);
+    height: 100vh;
+    /* background: blue; */
+  }
+}
